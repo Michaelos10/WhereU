@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Extract latitude and longitude from URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Build the deep link
+        const lat = getQueryParam("lat") || "0.00";
+        const lng = getQueryParam("lng") || "0.00";
+        const deepLink = `findafriend://location?lat=${lat}&lng=${lng}`;
+
+        // Redirect to the deep link
+        window.location.href = deepLink;
+    </script>
+</head>
+<body>
+    <h1>Redirecting to FindAFriend...</h1>
+    <p>If you are not redirected, <a id="manualLink" href="#">click here</a>.</p>
+
+    <script>
+        document.getElementById("manualLink").href = deepLink;
+    </script>
+</body>
+</html>
