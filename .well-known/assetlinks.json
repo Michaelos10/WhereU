@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.findafriend",
+      "sha256_cert_fingerprints": ["10:65:AF:5F:0A:49:69:73:3C:73:22:FC:4F:78:19:5F:7B:91:CA:10:D1:DB:5D:37:F4:CC:F7:D5:E8:3D:EE:3D"]
+    }
+  }
+]
